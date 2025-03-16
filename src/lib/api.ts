@@ -67,7 +67,10 @@ export const Query = {
             }
           }
         }
-        discussions(first: $numDiscussions) {
+        discussions(
+          first: $numDiscussions
+          categoryId: "DIC_kwDOAWsnks4CkwUt"
+        ) {
           nodes {
             author {
               login
