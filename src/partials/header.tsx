@@ -3,10 +3,10 @@
  *
  * @module
  */
-import cx from "classnames";
 import logo from "/favicon.svg";
 import { FaClock, FaHome, FaRocket, FaRss } from "react-icons/fa";
 import { useMatch, useNavigate } from "react-router-dom";
+import { cx } from "@liga/lib";
 
 /**
  * Exports this module.
@@ -19,7 +19,7 @@ export default function () {
   return (
     <header
       className={cx(
-        "btm-nav z-20 bg-base-200",
+        "btm-nav bg-base-200 z-20",
         "md:stack-y md:sticky md:top-0 md:h-screen md:items-start md:justify-normal",
         "[&_button]:md:btn [&_button]:md:btn-lg [&_button]:md:btn-block [&_button]:md:basis-auto [&_button]:md:flex-row",
         "[&_span]:hidden [&_span]:md:inline",

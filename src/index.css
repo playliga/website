@@ -1,6 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+  themes:
+    nord --default,
+    coffee --prefersdark;
+}
 
 /** global styles */
 html,
@@ -9,7 +13,7 @@ body {
 }
 
 html {
-  @apply cursor-default bg-base-100 motion-safe:scroll-smooth;
+  @apply bg-base-100 cursor-default motion-safe:scroll-smooth;
   font-family: "JetBrains Mono Variable", Courier, monospace;
 }
 
@@ -30,9 +34,14 @@ code {
   @apply !rounded-none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /** adds a hash to anchor elements */
 a:is([id], [title]) {
-  @apply before:text-muted no-underline before:content-["#_"] hover:underline hover:before:text-base-content;
+  @apply before:text-muted hover:before:text-base-content no-underline before:content-["#_"] hover:underline;
 }
 
 /** the main container */
@@ -41,26 +50,24 @@ main {
 }
 
 /** utilities */
-@layer utilities {
-  .center {
-    &:has(:only-child) {
-      @apply grid grid-cols-1 place-items-center;
-    }
-
-    &:not(:only-child) {
-      @apply flex flex-col items-center justify-center;
-    }
+@utility center {
+  &:has(:only-child) {
+    @apply grid grid-cols-1 place-items-center;
   }
 
-  .stack-x {
-    @apply flex;
+  &:not(:only-child) {
+    @apply flex flex-col items-center justify-center;
   }
+}
 
-  .stack-y {
-    @apply flex flex-col;
-  }
+@utility stack-x {
+  @apply flex;
+}
 
-  .text-muted {
-    @apply text-base-content/40 dark:text-base-content/20;
-  }
+@utility stack-y {
+  @apply flex flex-col;
+}
+
+@utility text-muted {
+  @apply text-base-content/40 dark:text-base-content/20;
 }

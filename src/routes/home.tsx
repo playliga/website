@@ -4,10 +4,9 @@
  * @module
  */
 import React from "react";
-import cx from "classnames";
 import { useReadQuery } from "@apollo/client";
 import { Link, useLoaderData } from "react-router-dom";
-import { Api, Util } from "@liga/lib";
+import { Api, Util, cx } from "@liga/lib";
 import { FaDownload, FaPlayCircle, FaWindows } from "react-icons/fa";
 
 /**

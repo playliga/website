@@ -6,7 +6,6 @@ This is the website source code for [LIGA Esports Manager](https://playliga.gg).
 
 Uses the following APIs and technologies:
 
-- Node v20.x
 - [GitHub GraphQL API](https://docs.github.com/en/graphql)
 - [GraphQL Code Generator](https://the-guild.dev/graphql/codegen)
 - [Daisy UI](https://daisyui.com/)
