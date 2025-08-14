@@ -19,9 +19,10 @@ export default function () {
   return (
     <header
       className={cx(
-        "btm-nav bg-base-200 z-20",
-        "md:stack-y md:sticky md:top-0 md:h-screen md:items-start md:justify-normal",
-        "[&_button]:md:btn [&_button]:md:btn-lg [&_button]:md:btn-block [&_button]:md:basis-auto [&_button]:md:flex-row",
+        "dock dock-sm bg-base-200 z-20",
+        "md:stack-y md:sticky md:top-0 md:h-screen md:items-start md:justify-normal md:p-0",
+        "[&_button]:md:btn [&_button]:md:btn-lg [&_button]:md:btn-block",
+        "[&_button]:md:mb-0 [&_button]:md:max-w-none [&_button]:md:basis-auto [&_button]:md:flex-row",
         "[&_span]:hidden [&_span]:md:inline",
       )}
     >
@@ -32,7 +33,10 @@ export default function () {
       />
       <button
         title="Home"
-        className={cx(useMatch("/") && "active md:!bg-base-300")}
+        className={cx(
+          useMatch("/") &&
+            "dock-active md:!bg-base-300 md:after:bg-transparent",
+        )}
         onClick={() => navigate("/")}
       >
         <FaHome />
@@ -40,7 +44,10 @@ export default function () {
       </button>
       <button
         title="Changelog"
-        className={cx(useMatch("changelog") && "active md:!bg-base-300")}
+        className={cx(
+          useMatch("changelog") &&
+            "dock-active md:!bg-base-300 md:after:bg-transparent",
+        )}
         onClick={() => navigate("changelog")}
       >
         <FaClock />
@@ -48,7 +55,10 @@ export default function () {
       </button>
       <button
         title="Features"
-        className={cx(useMatch("features") && "active md:!bg-base-300")}
+        className={cx(
+          useMatch("features") &&
+            "dock-active md:!bg-base-300 md:after:bg-transparent",
+        )}
         onClick={() => navigate("features")}
       >
         <FaRocket />
@@ -56,7 +66,10 @@ export default function () {
       </button>
       <button
         title="Blog"
-        className={cx(useMatch("blog") && "active md:!bg-base-300")}
+        className={cx(
+          useMatch("blog") &&
+            "dock-active md:!bg-base-300 md:after:bg-transparent",
+        )}
         onClick={() => navigate("blog")}
       >
         <FaRss />
