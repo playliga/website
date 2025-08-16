@@ -39,6 +39,7 @@ function Component() {
     [release],
   );
   const version = React.useMemo(() => release?.name, [release]);
+  const repoInfo = React.useMemo(() => Api.getRepoInfo(), []);
 
   function toggleVideo(event: React.MouseEvent<HTMLVideoElement, MouseEvent>) {
     setPlaying(!playing);
@@ -55,10 +56,20 @@ function Component() {
         <h1>LIGA Esports Manager</h1>
         <a
           href={`https://discord.gg/${import.meta.env.VITE_DISCORD_INVITE_CODE}`}
+          target="_blank"
         >
           <img
             alt="Join the Discord Server"
-            src="https://img.shields.io/discord/1296858234853789826?style=for-the-badge&label=Join%20the%20Discord%20Server"
+            src="https://img.shields.io/discord/1296858234853789826?style=for-the-badge&label=Join%20the%20Discord%20Server&logo=discord&logoColor=white"
+          />
+        </a>
+        <a
+          href={`https://${repoInfo.domain}/${repoInfo.owner}`}
+          target="_blank"
+        >
+          <img
+            alt="Static Badge"
+            src="https://img.shields.io/badge/view_on-github-black?style=for-the-badge&logo=github"
           />
         </a>
         <p>
@@ -103,8 +114,8 @@ function Component() {
       )}
       <section>
         <h2>
-          <Link id="download-instructions" to="#download-instructions">
-            Download Instructions
+          <Link id="install" to="#install">
+            Install Instructions
           </Link>
         </h2>
         <p>
@@ -123,7 +134,9 @@ function Component() {
           </Link>
         </h2>
         <ul>
-          <li>CS:GO, CS1.6, CS:CZ and CS:S are supported.</li>
+          <li>
+            <strong>All major versions of Counter-Strike are supported.</strong>
+          </li>
           <li>
             The app launches Counter-Strike and connects you to a local server.
           </li>
