@@ -77,8 +77,8 @@ function Component() {
           play your matches in-game or simulate them, you choose!
         </p>
       </section>
-      <section className="flex justify-center">
-        <video muted loop playsInline onClick={toggleVideo}>
+      <section className="flex justify-center shadow-md shadow-black/50">
+        <video muted loop playsInline onClick={toggleVideo} className="my-0!">
           <source src="/demo.mp4#t=0.1" type="video/mp4" />
         </video>
         <button
