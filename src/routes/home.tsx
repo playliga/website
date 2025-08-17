@@ -68,8 +68,17 @@ function Component() {
           target="_blank"
         >
           <img
-            alt="Static Badge"
+            alt="View on GitHub"
             src="https://img.shields.io/badge/view_on-github-black?style=for-the-badge&logo=github"
+          />
+        </a>
+        <a
+          href={`https://${repoInfo.domain}/${repoInfo.owner}/${repoInfo.name}/milestones`}
+          target="_blank"
+        >
+          <img
+            alt="View the Roadmap"
+            src="https://img.shields.io/badge/view_the-roadmap-blue?style=for-the-badge&logo=rocket&logoColor=white"
           />
         </a>
         <p>
