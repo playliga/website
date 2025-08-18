@@ -10,7 +10,7 @@
       <img src="https://img.shields.io/badge/view_the-roadmap-blue?style=for-the-badge&logo=rocket&logoColor=white" />
     </a>
   </p>
-  <p>This is the website source code for LIGA Esports Manager.</p>
+  <p>Marketing website for LIGA Esports Manager.</p>
 </div>
 
 # APIs and Technologies
