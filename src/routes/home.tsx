@@ -54,33 +54,35 @@ function Component() {
     <main className="prose max-w-none">
       <section>
         <h1>LIGA Esports Manager</h1>
-        <a
-          href={`https://discord.gg/${import.meta.env.VITE_DISCORD_INVITE_CODE}`}
-          target="_blank"
-        >
-          <img
-            alt="Join the Discord Server"
-            src="https://img.shields.io/discord/1296858234853789826?style=for-the-badge&label=Join%20the%20Discord%20Server&logo=discord&logoColor=white"
-          />
-        </a>
-        <a
-          href={`https://${repoInfo.domain}/${repoInfo.owner}`}
-          target="_blank"
-        >
-          <img
-            alt="View on GitHub"
-            src="https://img.shields.io/badge/view_on-github-black?style=for-the-badge&logo=github"
-          />
-        </a>
-        <a
-          href={`https://${repoInfo.domain}/${repoInfo.owner}/${repoInfo.name}/milestones`}
-          target="_blank"
-        >
-          <img
-            alt="View the Roadmap"
-            src="https://img.shields.io/badge/view_the-roadmap-blue?style=for-the-badge&logo=rocket&logoColor=white"
-          />
-        </a>
+        <article className="flex flex-col items-center justify-center gap-2 md:flex-row [&_img]:my-0">
+          <a
+            href={`https://discord.gg/${import.meta.env.VITE_DISCORD_INVITE_CODE}`}
+            target="_blank"
+          >
+            <img
+              alt="Discord"
+              src="https://img.shields.io/discord/1296858234853789826?style=for-the-badge&label=Discord&logo=discord&logoColor=white"
+            />
+          </a>
+          <a
+            href={`https://${repoInfo.domain}/${repoInfo.owner}`}
+            target="_blank"
+          >
+            <img
+              alt="GitHub"
+              src="https://img.shields.io/badge/view_on-github-black?style=for-the-badge&logo=github"
+            />
+          </a>
+          <a
+            href={`https://${repoInfo.domain}/${repoInfo.owner}/${repoInfo.name}/milestones`}
+            target="_blank"
+          >
+            <img
+              alt="Roadmap"
+              src="https://img.shields.io/badge/view_the-roadmap-blue?style=for-the-badge&logo=rocket&logoColor=white"
+            />
+          </a>
+        </article>
         <p>
           The world's first Esports simulator for Counter-Strike where you can
           play your matches in-game or simulate them, you choose!
