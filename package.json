@@ -1,5 +1,7 @@
 {
   "name": "@liga/website",
+  "displayName": "LIGA Esports Manager",
+  "description": "The world's first Esports simulator for Counter-Strike where you can play your matches in-game or simulate them, you choose!",
   "version": "4.1.0",
   "private": true,
   "type": "module",

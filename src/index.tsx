@@ -9,6 +9,7 @@ import "./index.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Routes from "@liga/routes";
+import AppInfo from "package.json";
 import { Api } from "@liga/lib";
 import { Header } from "@liga/partials";
 import {
@@ -79,6 +80,8 @@ function Root() {
 function Index() {
   return (
     <React.StrictMode>
+      <meta name="description" content={AppInfo.description} />
+      <title>{AppInfo.displayName}</title>
       <Api.Provider client={Api.client}>
         <RouterProvider router={routes} />
       </Api.Provider>

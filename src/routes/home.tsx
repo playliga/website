@@ -4,6 +4,7 @@
  * @module
  */
 import React from "react";
+import AppInfo from "package.json";
 import { useReadQuery } from "@apollo/client";
 import { Link, useLoaderData } from "react-router-dom";
 import { Api, Util, cx } from "@liga/lib";
@@ -53,7 +54,7 @@ function Component() {
   return (
     <main className="prose max-w-none">
       <section>
-        <h1 className="text-center">LIGA Esports Manager</h1>
+        <h1 className="text-center">{AppInfo.displayName}</h1>
         <article className="flex flex-col items-center justify-center gap-2 md:flex-row [&_img]:my-0">
           <a
             href={`https://discord.gg/${import.meta.env.VITE_DISCORD_INVITE_CODE}`}
@@ -83,10 +84,7 @@ function Component() {
             />
           </a>
         </article>
-        <p className="text-center">
-          The world's first Esports simulator for Counter-Strike where you can
-          play your matches in-game or simulate them, you choose!
-        </p>
+        <p className="text-center">{AppInfo.description}</p>
       </section>
       <section className="flex justify-center shadow-md shadow-black/50">
         <video muted loop playsInline onClick={toggleVideo} className="my-0!">
