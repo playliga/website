@@ -100,6 +100,17 @@ function Component() {
           <FaPlayCircle className="size-12" />
         </button>
       </section>
+      {!!import.meta.env.VITE_AFFILIATE_URL_CLASH_GG && (
+        <section>
+          <iframe
+            src={import.meta.env.VITE_AFFILIATE_URL_CLASH_GG}
+            width="100%"
+            height="125"
+            className="mt-12 w-full border-0"
+            allow="autoplay"
+          />
+        </section>
+      )}
       {!!version && !!asset && (
         <section>
           <h2>
