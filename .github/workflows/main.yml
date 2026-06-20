@@ -29,6 +29,7 @@ jobs:
           VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
           VITE_DISCORD_INVITE_CODE: ${{ vars.VITE_DISCORD_INVITE_CODE }}
           VITE_APPLICATION_REPO_URL: ${{ vars.VITE_APPLICATION_REPO_URL }}
+          VITE_AFFILIATE_URL_CLASH_GG: ${{ vars.VITE_AFFILIATE_URL_CLASH_GG }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: "./dist"
